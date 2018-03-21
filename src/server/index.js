@@ -9,7 +9,7 @@ const config = require('config');
 
 app.keys = [config.get('secret')];
 
-const indexRouter = require('./routes');
+const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 const handlers = fs.readdirSync(path.join(__dirname, 'handlers')).sort();

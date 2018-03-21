@@ -1,6 +1,6 @@
 
 Error.stackTraceLimit = 1000;
-require('trace');
+require('src/server/libs/trace');
 require('clarify');
 
 const chain = require('stack-chain');
