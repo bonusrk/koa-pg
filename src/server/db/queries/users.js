@@ -1,10 +1,10 @@
 const knex = require('../connection');
 
-function getAllUsers() {
-  return knex('users')
-    .select('*');
-}
+const getAllUsers = () => knex('users').select('*');
+
+const getSingleUser = (id) => knex('users').select('*').where({ id: parseInt(id) });
 
 module.exports = {
-  getAllUsers
+  getAllUsers,
+  getSingleUser,
 };
